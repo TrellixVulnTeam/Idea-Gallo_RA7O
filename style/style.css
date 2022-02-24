@@ -1,0 +1,245 @@
+*{
+    background-color: black;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0%;
+    padding: 0%;
+}
+
+
+
+.draft{
+    display: grid;
+    grid-template:
+                "header"
+                "nav"
+                "aside"
+                "main"
+                "footer" /
+                380px;
+}
+
+.header{
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    gap: 20px;
+}
+
+.header .buscador{
+    width: 320px;
+    height: 30px;
+}
+
+
+.nav{
+    grid-area: nav;
+    margin: 30px;
+    gap: 20px;
+}
+
+.nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    gap: 10px;
+}
+
+.nav li{
+    list-style: none;
+}
+
+.nav a{
+    text-decoration: none;
+}
+
+.aside{
+    grid-area: aside;
+    margin: 30px;
+    gap: 20px;
+    box-shadow: 0px 1px 5px white;
+}
+
+.aside h2{
+    text-align: center;
+}
+
+
+.asideOferta{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: center;
+    gap:10px;
+    padding: 15px;
+}
+
+.asideOferta img{
+    max-width: 100%;
+    height: 200px;
+}
+
+.main{
+    grid-area: main;
+    margin: 30px;
+    gap: 20px;
+}
+
+.main h2{
+    text-align: center;
+}
+
+.bancos{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: center;
+    gap:10px;
+    padding: 15px;
+}
+
+.bancos img{
+    max-width: 100%;
+    height: 200px;
+}
+
+.footer{
+    grid-area: footer;
+    margin: 30px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer img{
+    width: 100%;
+    height: 100px;
+}
+
+#icon{
+    max-width: 50px;
+    height: 50px;
+}
+
+
+@media (min-width:768px){
+    .draft{
+        display: grid;
+        grid-template:
+                    "header     header"
+                    "nav        nav"
+                    "aside      main"
+                    "footer     footer" /
+                    350px       auto;         
+    }
+
+    .header{
+        grid-area: header;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .header img{
+        max-width: 100%;
+        height: 100px;
+    }
+
+    .buscador{
+        width: 300px;
+        height: 30px;
+    }
+
+    .nav{
+        grid-area: nav;
+    }
+
+    .aside{
+        grid-area: aside;
+        margin: 0px;
+    }
+
+    .footer{
+        grid-area: footer;
+    }
+
+    .footer img{
+        width: 300px;
+        height: 100%;
+    }
+
+}
+
+@media (min-width:1024px){
+
+    .draft{
+        display: grid;
+        grid-template:
+                    "header     header      header" 200px
+                    "nav        main        aside"
+                    "footer     footer      footer" 200px/
+                    200px       auto        350px;
+        
+    }
+
+    .header{
+        grid-area: header;
+    }
+
+    .nav{
+        grid-area: nav;
+    }
+
+    .nav ul{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .aside{
+        grid-area: aside;
+    }
+
+    .main{
+        grid-area: main;
+        display: grid;
+        grid-template:
+                    "titulo     titulo"
+                    "banco1     banco2"
+                    "banco3     banco4";
+    }
+
+    #titulo{
+        grid-area: titulo;
+    }
+
+    #banco1{
+        grid-area: banco1;
+    }
+
+    #banco2{
+        grid-area: banco2;
+    }
+
+    #banco3{
+        grid-area: banco3;
+    }
+
+    #banco4{
+        grid-area: banco4;
+    }
+
+    .footer{
+        grid-area: footer;
+    }
+
+    .footer img{
+        width: 300px;
+        height: 700px;
+    }
+
+
+
+}
