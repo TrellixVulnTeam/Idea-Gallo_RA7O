@@ -6,7 +6,9 @@
     padding: 0%;
 }
 
-
+body{
+    background-color: black;
+}
 
 .draft{
     display: grid;
@@ -52,12 +54,49 @@
 
 .nav a{
     text-decoration: none;
+    color: white;
+}
+
+.nav a:hover{
+    color: white;
+}
+
+
+.aside{
+    grid-area: aside;
+    margin: 30px;
+    gap: 20px;
+    box-shadow: 0px 1px 5px white;
+}
+
+.aside h2{
+    text-align: center;
+    font-size:  calc( 15px + 1vw);
+}
+
+
+.asideOferta{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: center;
+    gap:10px;
+    padding: 15px;
+}
+
+.asideOferta img{
+    max-width: 100%;
+    height: 200px;
 }
 
 
 .main{
     grid-area: main;
     margin: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
 }
 
 .main h2{
@@ -66,22 +105,9 @@
     padding-top: 30px;
 }
 
-
-.formulario{
-    display: flex;
-    flex-direction: column;
+.main .container{
+    text-align: center;
 }
-
-#texto{
-    height: 80px;
-}
-
-#boton{
-    width: 50px;
-    cursor: pointer;
-}
-
-
 
 .footer{
     grid-area: footer;
@@ -92,7 +118,11 @@
     align-items: center;
 }
 
-.footer img{
+.footer a{
+    color: white;
+}
+
+.footer a img{
     width: 100%;
     height: 100px;
 }
@@ -134,6 +164,7 @@
 
     .nav{
         grid-area: nav;
+        justify-content: center;
     }
 
     .aside{
@@ -160,22 +191,45 @@
                     "header     header      header" 200px
                     "nav        main        aside"
                     "footer     footer      footer" 200px/
-                    150px       auto        350px;
+                    200px       auto        350px;
         
     }
 
     .header{
         grid-area: header;
-        background-color: purple;
     }
 
     .nav{
         grid-area: nav;
+        align-items: flex-start;
     }
 
     .nav ul{
         flex-direction: column;
         gap: 10px;
     }
+
+    .aside{
+        grid-area: aside;
+    }
+
+    .main{
+        grid-area: main;
+    }
+
+    #map{
+        width: 600px;
+        height: 450px;
+    }
+
+    .footer{
+        grid-area: footer;
+    }
+
+    .footer img{
+        width: 300px;
+        height: 200px;
+    }
+
 
 }

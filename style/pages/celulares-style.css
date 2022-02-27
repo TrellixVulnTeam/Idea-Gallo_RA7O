@@ -6,8 +6,6 @@
     padding: 0%;
 }
 
-
-
 .draft{
     display: grid;
     grid-template:
@@ -19,6 +17,7 @@
                 380px;
 }
 
+/* ---------------- Header ----------------*/
 .header{
     grid-area: header;
     display: flex;
@@ -31,7 +30,9 @@
     width: 320px;
     height: 30px;
 }
+/* --------------------------------*/
 
+/* ---------------- Nav ----------------*/
 .nav{
     grid-area: nav;
     margin: 30px;
@@ -52,13 +53,19 @@
 
 .nav a{
     text-decoration: none;
+    color: white;
 }
 
+.nav a:hover{
+    color: white;
+}
+/* --------------------------------*/
+
+/* ----------------Aside----------------*/
 .aside{
     grid-area: aside;
     margin: 30px;
     gap: 20px;
-    box-shadow: 0px 1px 5px white;
 }
 
 .aside h2{
@@ -73,13 +80,16 @@
     align-items: center;
     gap:10px;
     padding: 15px;
+    box-shadow: 0px 1px 5px white;
 }
 
 .asideOferta img{
     max-width: 100%;
     height: 200px;
 }
+/* --------------------------------*/
 
+/* ----------------Main----------------*/
 .main{
     grid-area: main;
     margin: 30px;
@@ -90,7 +100,7 @@
     text-align: center;
 }
 
-.celular{
+.accesorio{
     display: flex;
     flex-direction: column;
     margin: 10px;
@@ -99,17 +109,24 @@
     padding: 15px;
 }
 
-.celular img{
+.accesorio img{
     max-width: 100%;
-    height: 100px;
+    height: 200px;
 }
 
-.celular p{
+.accesorio p{
+    font-size: 25px;
     text-align: center;
 }
 
 
+.container img{
+    max-width: 100%;
+    height: 100px;
+}
+/* --------------------------------*/
 
+/* ----------------Footer----------------*/
 .footer{
     grid-area: footer;
     margin: 30px;
@@ -119,9 +136,14 @@
     align-items: center;
 }
 
+.footer a{
+    color: white;
+}
+
 .footer a img{
     width: 100%;
     height: 100px;
+
 }
 
 #icon{
@@ -160,6 +182,7 @@
 
     .nav{
         grid-area: nav;
+        justify-content: space-around;
     }
 
     .aside{
@@ -196,6 +219,7 @@
 
     .nav{
         grid-area: nav;
+        align-items: flex-start;
     }
 
     .nav ul{
@@ -213,7 +237,8 @@
         grid-template:
                     "titulo     titulo"
                     "celu1      celu2"
-                    "celu3      celu4";
+                    "celu3      celu4"
+                    "comp       comp";
     }
 
     #titulo{
@@ -234,6 +259,19 @@
 
     #celu4{
         grid-area: celu4;
+    }
+
+    .comps{
+        grid-area: comp;
+    }
+
+    .container{
+        width: 50% !important;
+    }
+
+    .container img{
+        max-width: 100%;
+        height: 200px;
     }
 
     .footer{
