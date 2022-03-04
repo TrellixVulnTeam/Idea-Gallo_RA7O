@@ -1,0 +1,202 @@
+*{
+    background-color: #18191a;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.draft{
+    display: grid;
+    grid-template:
+                "header"
+                "nav"
+                "aside"
+                "main"
+                "footer" /
+                380px;
+}
+
+.header{
+    grid-area:header;
+    text-align: center;
+}
+
+.header img{
+    max-width: 100%;
+    height: auto;
+}
+
+#icon{
+    color: white;
+}
+
+.navbar{
+    grid-area: nav;
+}
+
+.aside{
+    grid-area: aside;
+    margin: 30px;
+    gap: 20px;
+}
+
+.aside .ofertas{
+    display: flex;
+    flex-direction: column;
+}
+
+.aside h2{
+    text-align: center;
+}
+
+.asideOferta{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: center;
+    gap:10px;
+    padding: 15px;
+    box-shadow: 0px 1px 5px white;
+}
+
+.asideOferta img{
+    max-width: 100%;
+    height: 200px;
+}
+
+.main{
+    grid-area: main;
+}
+
+.main h2{
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.mainAccesorio{
+    display: grid;
+    grid-template:
+                "acc1       acc2"
+                "acc3       acc4" ;
+}
+
+#acc1{
+    grid-area: acc1;
+}
+
+#acc2{
+    grid-area: acc2;
+}
+
+#acc3{
+    grid-area: acc3;
+}
+
+#acc4{
+    grid-area: acc4;
+}
+
+.accesorio{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: center;
+    gap:10px;
+    padding: 15px;
+}
+
+.accesorio img{
+    max-width: 100%;
+    height: auto;
+}
+
+.accesorio p{
+    font-size: 15px;
+    text-align: center;
+}
+
+.cardsPlanes{
+    margin: 30px;
+}
+
+
+.footer{
+    grid-area: footer;
+    margin: 30px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer a{
+    color: white;
+    text-decoration: none;
+}
+
+.footer img{
+    width: 100%;
+    height: 100px;
+}
+
+#icon{
+    max-width: 50px;
+    height: 50px;
+}
+
+@media (min-width:768px){
+    .draft{
+        display: grid;
+        grid-template:
+                    "header     header"
+                    "nav        nav"
+                    "aside      main"
+                    "footer     footer"/
+                    auto        auto;      
+    }
+
+    .header img{
+        max-width: 100%;
+        height: 100px;
+    }
+
+    .cardsPlanes{
+        margin: 15px;
+    }
+
+    .footer img{
+        max-width: 100%;
+        height: 100px;
+    }
+}
+
+@media (min-width:1024px){
+    .draft{
+        display: grid;
+        grid-template:
+                    "header     header"
+                    "nav        nav"
+                    "aside      aside"
+                    "main       main"
+                    "footer     footer";
+    }
+
+    .aside .ofertas{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .accesorio img{
+        max-width: 100%;
+        height: 200px;
+    }
+
+    .accesorio p{
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .cardsPlanes{
+        margin: 100px;
+    }
+}

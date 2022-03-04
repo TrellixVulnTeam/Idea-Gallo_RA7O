@@ -1,0 +1,235 @@
+* {
+  background-color: #18191a;
+  color: white;
+  font-family: "Ubuntu", sans-serif; }
+
+body {
+  background: #18191a; }
+
+.draft {
+  display: grid;
+  grid-template: "header" "nav" "aside" "main" "footer" / 380px; }
+
+/*----HEADER COMUN PARA TODOS LOS HTMLs----*/
+.header {
+  grid-area: header;
+  text-align: center; }
+  .header img {
+    max-width: 100%;
+    height: auto; }
+  .header #icon {
+    color: white; }
+
+/*----NAV COMUN PARA TODOS LOS HTMLs----*/
+.navbar {
+  grid-area: nav; }
+  .navbar a:hover {
+    text-decoration: underline; }
+
+/*----ASIDE COMUN PARA TODOS LOS HTMLs----*/
+.aside {
+  grid-area: aside;
+  margin: 30px;
+  gap: 20px; }
+  .aside .ofertas {
+    display: flex;
+    flex-direction: column; }
+  .aside h2 {
+    text-align: center;
+    padding-bottom: 40px; }
+  .aside .asideOferta {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    box-shadow: 0px 1px 5px white; }
+    .aside .asideOferta img {
+      max-width: 100%;
+      height: 200px; }
+    .aside .asideOferta:hover {
+      transform: scale(1.2, 1.2); }
+
+/*----MAIN y H2 COMUN PARA TODOS LOS HTML----*/
+.main {
+  grid-area: main;
+  margin: 30px;
+  gap: 20px;
+  /*----Esta parte es de index.html----*/
+  /*----Esta parte es de notebooks.html----*/
+  /*----Esta parte es de consolas.html----*/
+  /*----Esta parte es de celulares.html----*/
+  /*---Aca esta contactos.html----*/ }
+  .main h2 {
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 30px; }
+  .main .bancos {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: center;
+    gap: 10px;
+    padding: 15px; }
+    .main .bancos img {
+      max-width: 100%;
+      height: 200px; }
+  .main .info {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: center;
+    gap: 10px;
+    padding: 15px; }
+    .main .info img {
+      max-width: 100%;
+      height: 200px; }
+  .main .mainMarcas {
+    grid-area: marcas;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 200px; }
+    .main .mainMarcas img {
+      height: 100px;
+      height: 100px; }
+  .main .mainJuegos {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .main .mainJuegos .juegos {
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      align-items: center; }
+      .main .mainJuegos .juegos img {
+        max-width: 100%;
+        height: 200px; }
+  .main .media {
+    display: flex;
+    flex-direction: column;
+    text-align: center; }
+  .main .mainAccesorio {
+    display: grid;
+    grid-template: "acc1       acc2" "acc3       acc4"; }
+    .main .mainAccesorio .accesorio {
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      align-items: center;
+      gap: 10px;
+      padding: 15px; }
+      .main .mainAccesorio .accesorio img {
+        max-width: 100%;
+        height: auto; }
+      .main .mainAccesorio .accesorio p {
+        font-size: 15px;
+        text-align: center; }
+      .main .mainAccesorio .accesorio #acc1 {
+        grid-area: acc1; }
+      .main .mainAccesorio .accesorio #acc2 {
+        grid-area: acc2; }
+      .main .mainAccesorio .accesorio #acc3 {
+        grid-area: acc3; }
+      .main .mainAccesorio .accesorio #acc4 {
+        grid-area: acc4; }
+  .main .cardsPlanes {
+    margin: 30px; }
+  .main #map {
+    margin: 10px; }
+
+/*----FOOTER COMUN PARA TODOS LOS HTMLs----*/
+.footer {
+  box-shadow: 0px 1px 10px white;
+  grid-area: footer;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .footer a {
+    color: white;
+    text-decoration: none; }
+  .footer img {
+    width: 100%;
+    height: 100px; }
+  .footer #icon {
+    max-width: 50px;
+    height: 50px; }
+
+/*----Medias queries para tablet----*/
+@media (min-width: 768px) {
+  .draft {
+    display: grid;
+    grid-template: "header     header" "nav        nav" "aside      main" "footer     footer"/ auto        auto; }
+  .header {
+    grid-area: header;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around; }
+    .header img {
+      max-width: 100%;
+      height: 100px; }
+    .header .buscador {
+      width: 300px;
+      height: 30px; }
+  .nav {
+    grid-area: nav;
+    justify-content: space-around; }
+  .main .cardsPlanes {
+    margin: 15px; }
+  .main #map {
+    margin: 40px; }
+  .footer img {
+    width: 300px;
+    height: 100%; } }
+
+/*----Medias queries para computadora----*/
+@media (min-width: 1024px) {
+  .draft {
+    display: grid;
+    grid-template: "header     header" "nav        nav" "aside      aside" "main       main" "footer     footer"; }
+  .aside {
+    grid-area: aside; }
+    .aside .ofertas {
+      flex-direction: row;
+      justify-content: space-around; }
+  .main {
+    grid-area: main;
+    /*----index.html----*/
+    /*----Consolas.html----*/
+    /*----celulares.html----*/
+    /*----contacto.html----*/ }
+    .main .mainBanco {
+      grid-area: main;
+      display: flex;
+      justify-content: space-around; }
+      .main .mainBanco p {
+        text-align: center; }
+    .main .mainInfo {
+      display: flex;
+      justify-content: space-around; }
+      .main .mainInfo p {
+        text-align: center; }
+    .main .mainJuegos {
+      display: grid;
+      grid-template: "juego1     juego2      juego3" "juego4     juego5      juego6"; }
+    .main .media {
+      flex-direction: row;
+      justify-content: space-around; }
+      .main .media #vid {
+        height: 300px;
+        width: 500px; }
+    .main .mainAccesorio {
+      grid-template: "acc1       acc2    acc3       acc4"; }
+      .main .mainAccesorio .accesorio img {
+        width: 200px;
+        height: 200px; }
+      .main .mainAccesorio .accesorio p {
+        font-size: 25px;
+        text-align: center; }
+    .main .cardsPlanes {
+      margin: 100px; }
+    .main #map {
+      width: 600px;
+      height: 450px; } }

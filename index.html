@@ -1,90 +1,174 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="imagenes/pest.png">
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-    <title>BatiTec</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!------Code CSS-------->
+  <link rel="stylesheet" href="css/style.css">
+  <!------Iconos-------->
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+  <!------Animaciones-------->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!------Boostrap-------->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!------Icono para la pagina-------->
+  <link rel="icon" href="imagenes/pest.png">
+  <title>BatiTec</title>
 </head>
-<body>
-    
-    <div class="draft">
+  <div class="draft">
+    <!------Header que contiene el logo linkeado a index.html-------->
+    <header class="header">
+      <a href="index.html"> <img src="imagenes/logo.png" alt=""> </a>
+    </header>
+    <!------NavBar importada de Bootstrap linkeado a las paginas-------->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <i class="fa fa-home" id="icon"></i>
+          <span>Home</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="pages/notebooks.html">
+                <i class="fa fa-laptop"  id="icon"></i>
+                <span>Notebooks</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/consolas.html">
+                <i class="fa fa-gamepad" id="icon"></i>
+                <span>Consolas</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/celulares.html">
+                <i class="fa fa-mobile" id="icon"></i>
+                <span>Celulares</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/contacto.html">
+                <i class="fa fa-contao" id="icon"></i>
+                <span>Contacto</span>
+              </a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Search">
+            <button class="btn btn-dark" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!------Aside de ofertas donde se encuentran 3 imagenes de distintos productos con tu oferta-------->
+    <aside class="aside">
+      <h2>OFERTAS EXCLUSIVAS</h2>
+      <section class="ofertas">
+        <div class="asideOferta">
+            <img src="imagenes/galeria1.jpg" alt="">
+            <p>NOTEBOOK GAMER</p>
+            <p>12 cuotas sin interes</p>
+        </div>
+        <div class="asideOferta">
+            <img src="imagenes/galeria2.jpg" alt="">
+            <p>PLAYSTATION 5</p>
+            <p>15% off con BBVA</p>
+        </div>
+        <div class="asideOferta">
+            <img src="imagenes/galeria3.jpg" alt="">
+            <p>TESLAPHONE</p>
+            <p>6 cuotas con Personal</p>
+        </div>
+      </section>
+    </aside>
+    <!------Main donde se encuentra los bancos y promociones asi como tambien informacion de envio, etc-------->
+    <main class="main">
+      <h2 id="titulo">PROMOCIONES BANCARIAS </h2>
+      <section class="mainBanco">
+        <div class="bancos">
+            <img src="imagenes/bancoBBVA.jpg" alt="" id="banco1">
+            <p>BBVA Frances</p>
+            <p>6 cuotas sin interes</p>
+        </div>
+        <div class="bancos">
+            <img src="imagenes/bancoCity.jpg" alt="" id="banco1">
+            <p>CITY BANK</p>
+            <p>15% OFF Lunes y Martes</p>
+        </div>
+        <div class="bancos">
+            <img src="imagenes/bancoHSBC.jpg" alt="" id="banco1">
+            <p>HSBC</p>
+            <p>10% OFF Sabados y Viernes</p>
+        </div>
+        <div class="bancos">
+            <img src="imagenes/bancoMP.jpg" alt="">
+            <p>MERCADOPAGO</p>
+            <p>Envio Gratis (CABA)</p>
+        </div>
+      </section>
 
-        <header class="header">
-            <img src="imagenes/logo3.jpg" alt="">
-            <input type="search" placeholder="Buscar productos..." class="buscador">
-        </header>
+      <div class="informacion">
+        <h2>INFORMACION IMPORANTE</h2>
+        <section class="mainInfo">
+          <div class="info">
+            <img src="imagenes/soporte.png" alt="">
+            <p>Soporte tecnico</p>
+            <p>Hasta 10 dias despues de la compra</p>
+          </div>
+          <div class="info">
+            <img src="imagenes/envio.png" alt="">
+            <p>Envio a domicilio</p>
+            <p>Gratis a todo Buenos Aires</p>
+          </div>
+          <div class="info">
+            <img src="imagenes/segura.png" alt="">
+            <p>Compras seguras</p>
+            <p>100% de seguridad en tus compras</p>
+          </div>
+        </section>
+      </div>
+    </main>
+        <!------Footer con logo, linkeado a index.html + redes linkeadas + formulario de Bootstrap-------->
+    <footer class="footer text-center">
+      <a href="index.html"></a> <img id = "logo" src="imagenes/logo.jpg" alt="">
+      <a href="html/contacto.html">CONTACTO</a>
+      <div>
+        <a href="https://www.facebook.com/"> <img src="imagenes/logofacebook.jpg" alt="" id="icon"></a>
+        <a href="https://www.instagram.com/?hl=es"> <img src="imagenes/logoinstagram.jpg" alt="" id="icon"></a>
+        <a href="https://twitter.com/home"> <img src="imagenes/logotwitter.jpg" alt="" id="icon"></a>
+        <a href="https://www.youtube.com/"> <img src="imagenes/logoyoutube.jpg" alt="" id="icon"></a>
+      </div>
 
-        <nav class="nav">
-            <ul>
-                <li><i class="fa fa-home" id="icon"></i><a href="index.html"> Home</a></li>
-                <li><i class="fa fa-laptop"  id="icon"></i><a href="pages\notebooks.html"> Notebooks</a></li>
-                <li><i class="fa fa-gamepad" id="icon"></i><a href="pages\celulares.html"> Celulares</a></li>
-                <li><i class="fa fa-mobile" id="icon"></i><a href="pages\consolas.html"> Consolas</a></li>
-                <li><i class="fa fa-contao" id="icon"></i><a href="pages\contacto.html"> Contacto</a></li>
-            </ul>
-        </nav>
-
-        <aside class="aside">
-            <h2>OFERTAS EXCLUSIVAS</h2>
-            <div class="asideOferta">
-                <img src="imagenes/galeria1.jpg" alt="">
-                <p>NOTEBOOK GAMER</p>
-                <p>12 cuotas sin interes</p>
+      <div class="container p-4 pb-0">
+        <!--Formulario suscripcion-->
+        <section class="">
+          <form action="">
+            <div class="row d-flex justify-content-center">
+              <div class="col-auto">
+                <p class="pt-2">
+                  <strong>Suscribite para recibir informacion</strong>
+                </p>
+              </div>
+              <div class="col-md-5 col-12">
+                <div class="form-outline mb-4">
+                  <input type="email" id="form5Example27" class="form-control" placeholder="Email..." />
+                </div>
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-4">Suscribir</button>
+              </div>
             </div>
-            <div class="asideOferta">
-                <img src="imagenes/galeria2.jpg" alt="">
-                <p>PLAYSTATION 5</p>
-                <p>15% off con BBVA</p>
-            </div>
-            <div class="asideOferta">
-                <img src="imagenes/galeria3.jpg" alt="">
-                <p>TESLAPHONE</p>
-                <p>6 cuotas con Personal</p>
-            </div>
-        </aside>
-
-        <main class="main">
-
-            <h2 id="titulo">PROMOCIONES BANCARIAS </h2>
-
-            <div class="bancos">
-                <img src="imagenes/bancoBBVA.jpg" alt="" id="banco1">
-                <p>BBVA Frances</p>
-                <p>6 cuotas sin interes</p>
-            </div>
-            <div class="bancos">
-                <img src="imagenes/bancoCity.jpg" alt="" id="banco1">
-                <p>CITY BANK</p>
-                <p>15% OFF Lunes y Martes</p>
-            </div>
-            <div class="bancos">
-                <img src="imagenes/bancoHSBC.jpg" alt="" id="banco1">
-                <p>HSBC</p>
-                <p>10% OFF Sabados y Viernes</p>
-            </div>
-            <div class="bancos">
-                <img src="imagenes/bancoMP.jpg" alt="">
-                <p>MERCADOPAGO</p>
-                <p>Envio Gratis (CABA)</p>
-            </div>
-        </main>
-
-        <footer class="footer">
-            <a href="index.html"></a> <img id = "logo" src="imagenes/logo.jpg" alt="">
-            <a href="html/contacto.html">CONTACTO</a>
-            <div>
-                <a href="https://www.facebook.com/"> <img src="imagenes/logofacebook.jpg" alt="" id="icon"></a>
-                <a href="https://www.instagram.com/?hl=es"> <img src="imagenes/logoinstagram.jpg" alt="" id="icon"></a>
-                <a href="https://twitter.com/home"> <img src="imagenes/logotwitter.jpg" alt="" id="icon"></a>
-                <a href="https://www.youtube.com/"> <img src="imagenes/logoyoutube.jpg" alt="" id="icon"></a>
-            </div>
-        </footer>
-
-    </div>
-
+          </form>
+        </section>
+      </div>
+    </footer>
+  </div>
+  <!----Script necesario para Bootstrap---->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
