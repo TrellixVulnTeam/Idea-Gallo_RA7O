@@ -6,6 +6,12 @@
 body {
   background: #18191a; }
 
+/*----EXTEND----*/
+.flexColumn, .aside .ofertas, .aside .asideOferta, .main .bancos, .main .info, .main .mainJuegos, .main .mainJuegos .juegos, .main .media, .main .mainAccesorio .accesorio, .footer {
+  display: flex;
+  flex-direction: column; }
+
+/*----MIXIN----*/
 .draft {
   display: grid;
   grid-template: "header" "nav" "aside" "main" "footer" / 380px; }
@@ -15,8 +21,8 @@ body {
   grid-area: header;
   text-align: center; }
   .header img {
-    max-width: 100%;
-    height: auto; }
+    height: auto;
+    max-width: 100%; }
   .header #icon {
     color: white; }
 
@@ -31,23 +37,18 @@ body {
   grid-area: aside;
   margin: 30px;
   gap: 20px; }
-  .aside .ofertas {
-    display: flex;
-    flex-direction: column; }
   .aside h2 {
     text-align: center;
     padding-bottom: 40px; }
   .aside .asideOferta {
-    display: flex;
-    flex-direction: column;
     margin: 10px;
     align-items: center;
     gap: 10px;
     padding: 15px;
     box-shadow: 0px 1px 5px white; }
     .aside .asideOferta img {
-      max-width: 100%;
-      height: 200px; }
+      height: 200px;
+      max-width: 100%; }
     .aside .asideOferta:hover {
       transform: scale(1.2, 1.2); }
 
@@ -66,25 +67,21 @@ body {
     padding-bottom: 30px;
     padding-top: 30px; }
   .main .bancos {
-    display: flex;
-    flex-direction: column;
     margin: 10px;
     align-items: center;
     gap: 10px;
     padding: 15px; }
     .main .bancos img {
-      max-width: 100%;
-      height: 200px; }
+      height: 200px;
+      max-width: 100%; }
   .main .info {
-    display: flex;
-    flex-direction: column;
     margin: 10px;
     align-items: center;
     gap: 10px;
     padding: 15px; }
     .main .info img {
-      max-width: 100%;
-      height: 200px; }
+      height: 200px;
+      max-width: 100%; }
   .main .mainMarcas {
     grid-area: marcas;
     display: flex;
@@ -92,37 +89,28 @@ body {
     justify-content: space-around;
     padding-bottom: 200px; }
     .main .mainMarcas img {
-      height: 100px;
       height: 100px; }
   .main .mainJuegos {
-    display: flex;
-    flex-direction: column;
     align-items: center; }
     .main .mainJuegos .juegos {
-      display: flex;
-      flex-direction: column;
       margin: 10px;
       align-items: center; }
       .main .mainJuegos .juegos img {
-        max-width: 100%;
-        height: 200px; }
+        height: 200px;
+        max-width: 100%; }
   .main .media {
-    display: flex;
-    flex-direction: column;
     text-align: center; }
   .main .mainAccesorio {
     display: grid;
     grid-template: "acc1       acc2" "acc3       acc4"; }
     .main .mainAccesorio .accesorio {
-      display: flex;
-      flex-direction: column;
       margin: 10px;
       align-items: center;
       gap: 10px;
       padding: 15px; }
       .main .mainAccesorio .accesorio img {
-        max-width: 100%;
-        height: auto; }
+        height: auto;
+        max-width: 100%; }
       .main .mainAccesorio .accesorio p {
         font-size: 15px;
         text-align: center; }
@@ -137,25 +125,25 @@ body {
   .main .cardsPlanes {
     margin: 30px; }
   .main #map {
-    margin: 10px; }
+    height: 350px;
+    width: 320px; }
 
 /*----FOOTER COMUN PARA TODOS LOS HTMLs----*/
 .footer {
+  padding-top: 20px;
   box-shadow: 0px 1px 10px white;
   grid-area: footer;
   gap: 20px;
-  display: flex;
-  flex-direction: column;
   align-items: center; }
   .footer a {
     color: white;
     text-decoration: none; }
   .footer img {
-    width: 100%;
-    height: 100px; }
+    height: 100px;
+    max-width: 100%; }
   .footer #icon {
     max-width: 50px;
-    height: 50px; }
+    height: 100%; }
 
 /*----Medias queries para tablet----*/
 @media (min-width: 768px) {
@@ -168,8 +156,8 @@ body {
     align-items: center;
     justify-content: space-around; }
     .header img {
-      max-width: 100%;
-      height: 100px; }
+      height: 100px;
+      max-width: 100%; }
     .header .buscador {
       width: 300px;
       height: 30px; }
@@ -179,7 +167,8 @@ body {
   .main .cardsPlanes {
     margin: 15px; }
   .main #map {
-    margin: 40px; }
+    height: 350px;
+    width: 100%; }
   .footer img {
     width: 300px;
     height: 100%; } }
@@ -231,5 +220,5 @@ body {
     .main .cardsPlanes {
       margin: 100px; }
     .main #map {
-      width: 600px;
+      max-width: 100%;
       height: 450px; } }
