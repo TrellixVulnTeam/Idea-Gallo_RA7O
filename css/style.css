@@ -14,7 +14,12 @@ body {
 /*----MIXIN----*/
 .draft {
   display: grid;
-  grid-template: "header" "nav" "aside" "main" "footer" / 380px; }
+  grid-template: "header"
+ "nav"
+ "aside"
+ "main"
+ "footer" /
+ 380px; }
 
 /*----HEADER COMUN PARA TODOS LOS HTMLs----*/
 .header {
@@ -102,7 +107,8 @@ body {
     text-align: center; }
   .main .mainAccesorio {
     display: grid;
-    grid-template: "acc1       acc2" "acc3       acc4"; }
+    grid-template: "acc1       acc2"
+ "acc3       acc4"; }
     .main .mainAccesorio .accesorio {
       margin: 10px;
       align-items: center;
@@ -149,7 +155,11 @@ body {
 @media (min-width: 768px) {
   .draft {
     display: grid;
-    grid-template: "header     header" "nav        nav" "aside      main" "footer     footer"/ auto        auto; }
+    grid-template: "header     header"
+ "nav        nav"
+ "aside      main"
+ "footer     footer"/
+ auto        auto; }
   .header {
     grid-area: header;
     flex-direction: row;
@@ -177,7 +187,11 @@ body {
 @media (min-width: 1024px) {
   .draft {
     display: grid;
-    grid-template: "header     header" "nav        nav" "aside      aside" "main       main" "footer     footer"; }
+    grid-template:  "header     header"
+                    "nav        nav"
+                    "aside      aside"
+                    "main       main"
+                    "footer     footer"; }
   .aside {
     grid-area: aside; }
     .aside .ofertas {
@@ -202,7 +216,8 @@ body {
         text-align: center; }
     .main .mainJuegos {
       display: grid;
-      grid-template: "juego1     juego2      juego3" "juego4     juego5      juego6"; }
+      grid-template: "juego1     juego2      juego3"
+ "juego4     juego5      juego6"; }
     .main .media {
       flex-direction: row;
       justify-content: space-around; }

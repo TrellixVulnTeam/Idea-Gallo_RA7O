@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!------Boostrap-------->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <!------Code CSS-------->
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../style/style-pages/consolaStyle.css">
   <!------Iconos-------->
   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
   <!------Animaciones-------->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <!------Boostrap-------->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <!------Icono para la pagina-------->
   <link rel="icon" href="../imagenes/pest.png">
   <!------Palabras claves para SEO-------->
@@ -19,159 +19,179 @@
   <!------Descripciones para SEO-------->
   <meta name="description" content="Consolas para juegos playstation, xbox y nintendo. Los mejores juegos al mejor precio">
   
-  <title>BatiTec</title>
-
+  <title>Consolas</title>
 </head>
-  <div class="draft">
-    <!------Header que contiene el logo linkeado a index.html-------->
-    <header class="header">
-      <a href="../index.html"> <img src="../imagenes/logo.png" alt=""> </a>
-    </header>
-    <!------NavBar importada de Bootstrap linkeado a las paginas-------->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <i class="fa fa-gamepad"  id="icon"></i>
-          <span>Consolas</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html">
-                <i class="fa fa-home" id="icon"></i>
-                <span>Home</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="notebooks.html">
-                <i class="fa fa-laptop" id="icon"></i>
-                <span>Notebook</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="celulares.html">
-                <i class="fa fa-mobile" id="icon"></i>
-                <span>Celulares</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contacto.html">
-                <i class="fa fa-contao" id="icon"></i>
-                <span>Contacto</span>
-              </a>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Search">
-            <button class="btn btn-dark" type="submit">Buscar</button>
-          </form>
-        </div>
-      </div>
-    </nav>
-    <!------Aside de ofertas donde se encuentran 3 imagenes de distintos productos con tu oferta-------->
-    <aside class="aside">
-      <h2>OFERTAS EXCLUSIVAS</h2>
-      <section class="ofertas">
-        <!------Cada uno de estos es flex-------->
-        <div class="asideOferta">
-            <img src="../imagenes/galeria2.jpg" alt="">
-            <p>PLAYSTATION</p>
-            <p>15% off con BBVA</p>
-        </div>
-        <div class="asideOferta">
-            <img src="../imagenes//ofertaCons2.jpg" alt="">
-            <p>X-BOX ONE X</p>
-            <p>18 cuotas sin interes</p>
-        </div>
-        <div class="asideOferta">
-            <img src="../imagenes/ofertaCons3.jpg" alt="">
-            <p>NINTENDO SWITCH</p>
-            <p>Llevas una funda de regalo</p>
-        </div>
-      </section>
-    </aside>
-    <!------Main con juegos y animaciones de entrada + 2 videos-------->
-    <main class="main">
-      <h2 id="titulo" >JUEGOS MAS VENDIDOS</h2>
-      <section class="mainJuegos">
-        <div class="juegos" >
-          <img src="../imagenes/juego1.jpg" alt="" id="juego1" class="animate__animated animate__backInLeft">
-            <p class="animate__animated animate__backInLeft">GTA V</p>
-        </div>
-        <div class="juegos">
-          <img src="../imagenes/juego2.jpg" alt="" id="juego2" class="animate__animated animate__backInDown">
-          <p class="animate__animated animate__backInDown">ROCKET LEAGUE</p>
-        </div>
-        <div class="juegos">
-          <img src="../imagenes/juego3.jpg" alt="" id="juego3" class="animate__animated animate__backInRight">
-          <p class="animate__animated animate__backInRight">MINECRAFT</p>
-        </div>
-        <div class="juegos">
-          <img src="../imagenes/juego4.jpg" alt="" id="juego4" class="animate__animated animate__backInLeft">
-          <p class="animate__animated animate__backInLeft">POKEMON ROJO FUEGO</p>
-        </div>
-        <div class="juegos">
-          <img src="../imagenes/juego5.jpg" alt="" id="juego5" class="animate__animated animate__backInUp">
-          <p class="animate__animated animate__backInUp">FIFA 22</p>
-        </div>
-        <div class="juegos">
-          <img src="../imagenes/juego6.jpg" alt="" id="juego5" class="animate__animated animate__backInRight">
-          <p class="animate__animated animate__backInRight">MORTAL KOMBAT ULTIMATE</p>
-        </div>
-      </section>
+<body>
 
-      <div class="media">
-        <div id="media1">
-          <h2>MEJORES JUEGOS</h2>
-          <iframe id="vid" width="" height="" src="https://www.youtube.com/embed/70Zk33bi6hY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="animate__animated animate__backInLeft"></iframe>
-        </div>
-        <div id="media2">
-          <h2>MEJORES CONSOLAS</h2>
-          <iframe id="vid" width="" height="" src="https://www.youtube.com/embed/6FrUwF6V_Bw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="animate__animated animate__backInRight"></iframe>
-        </div>
-      </div>
-    </main>
-    <!------Footer con logo, linkeado a index.html + redes linkeadas + formulario de Bootstrap-------->
-    <footer class="footer text-center">
-      <a href="../index.html"><img id = "logo" src="../imagenes/logo.jpg" alt=""></a>
-      <a href="contacto.html">CONTACTO</a>
-      <div>
-          <a href="https://www.facebook.com/"> <img src="../imagenes/logofacebook.jpg" alt="" id="icon"></a>
-          <a href="https://www.instagram.com/?hl=es"> <img src="../imagenes/logoinstagram.jpg" alt="" id="icon"></a>
-          <a href="https://twitter.com/home"> <img src="../imagenes/logotwitter.jpg" alt="" id="icon"></a>
-          <a href="https://www.youtube.com/"> <img src="../imagenes/logoyoutube.jpg" alt="" id="icon"></a>
-      </div>
-
-      <div class="container p-4 pb-0">
-        <!--Formulario suscripcion-->
-        <section class="">
-          <form action="">
-            <div class="row d-flex justify-content-center">
-              <div class="col-auto">
-                <p class="pt-2">
-                  <strong>Suscribite para recibir informacion</strong>
-                </p>
-              </div>
-              <div class="col-md-5 col-12">
-                <div class="form-outline mb-4">
-                  <input type="email" id="form5Example27" class="form-control" placeholder="Email..." />
-                </div>
-              </div>
-              <div class="col-auto">
-                <button type="submit" class="btn btn-primary mb-4">Suscribir</button>
-              </div>
+    <div class="container">
+  
+        <div class="row">
+            <div class="col">
+                <header class="header">
+                    <a href="../index.html"> <img src="../imagenes/logo.png" alt="Logo"> </a>
+                </header>
             </div>
-          </form>
-        </section>
-      </div>
+        </div>
+  
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            <i class="fa fa-laptop"  id="icon"></i>
+                            <span>Notebooks</span>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../index.html">
+                                        <i class="fa fa-home" id="icon"></i>
+                                        <span>Home</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="consolas.html">
+                                        <i class="fa fa-gamepad" id="icon"></i>
+                                        <span>Consolas</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="celulares.html">
+                                        <i class="fa fa-mobile" id="icon"></i>
+                                        <span>Celulares</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contacto.html">
+                                        <i class="fa fa-contao" id="icon"></i>
+                                        <span>Contacto</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Search">
+                                <button class="btn btn-info" type="submit">Buscar</button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+  
+      <div class="row">
+  
+        <div class="col-lg-3">
+            <aside class="aside">
+                <h2>OFERTAS EXCLUSIVAS</h2>
+                <section class="ofertas">
+                  <!------Cada uno de estos es flex-------->
+                  <div class="asideOferta">
+                      <img src="../imagenes/galeria2.jpg" alt="OfertaConsola1">
+                      <p>PLAYSTATION</p>
+                      <p>15% off con BBVA</p>
+                  </div>
+                  <div class="asideOferta">
+                      <img src="../imagenes//ofertaCons2.jpg" alt="OfertaConsola2">
+                      <p>X-BOX ONE X</p>
+                      <p>18 cuotas sin interes</p>
+                  </div>
+                  <div class="asideOferta">
+                      <img src="../imagenes/ofertaCons3.jpg" alt="OfertaConsola3">
+                      <p>NINTENDO SWITCH</p>
+                      <p>Llevas una funda de regalo</p>
+                  </div>
+                </section>
+            </aside>
+        </div>
+  
+        <div class="col-lg-9">
+            <div class="menu">
+                <h2 id="titulo" >JUEGOS MAS VENDIDOS</h2>
+                <section class="mainJuegos">
+                    <div class="juegos" >
+                        <img src="../imagenes/juego1.jpg" alt="juego1" id="juego1" class="animate__animated animate__backInLeft img-thumbnail img-fluid">
+                        <p class="animate__animated animate__backInLeft">GTA V</p>
+                    </div>
+                    <div class="juegos">
+                        <img src="../imagenes/juego2.jpg" alt="juego2" id="juego2" class="animate__animated animate__backInDown img-thumbnail img-fluid">
+                        <p class="animate__animated animate__backInDown">ROCKET LEAGUE</p>
+                    </div>
+                    <div class="juegos">
+                        <img src="../imagenes/juego3.jpg" alt="juego3" id="juego3" class="animate__animated animate__backInRight img-thumbnail img-fluid">
+                        <p class="animate__animated animate__backInRight">MINECRAFT</p>
+                    </div>
+                    <div class="juegos">
+                        <img src="../imagenes/juego4.jpg" alt="juego4" id="juego4" class="animate__animated animate__backInLeft img-thumbnail img-fluid">
+                        <p class="animate__animated animate__backInLeft">POKEMON ROJO FUEGO</p>
+                    </div>
+                    <div class="juegos">
+                        <img src="../imagenes/juego5.jpg" alt="juego5" id="juego5" class="animate__animated animate__backInUp img-thumbnail img-fluid">
+                        <p class="animate__animated animate__backInUp">FIFA 22</p>
+                    </div>
+                    <div class="juegos">
+                        <img src="../imagenes/juego6.jpg" alt="juego5" class="animate__animated animate__backInRight img-thumbnail img-fluid">
+                        <p class="animate__animated animate__backInRight">MORTAL KOMBAT</p>
+                    </div>
+                </section>
+          
+                <div class="media">
+                    <div id="media1">
+                        <h2>MEJORES JUEGOS!</h2>
+                        <iframe id="vid" width="" height="" src="https://www.youtube.com/embed/70Zk33bi6hY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="animate__animated animate__backInLeft"></iframe>
+                    </div>
+                    <div id="media2">
+                        <h2>MEJORES CONSOLAS!</h2>
+                        <iframe id="vid" width="" height="" src="https://www.youtube.com/embed/6FrUwF6V_Bw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="animate__animated animate__backInRight"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+        <div class="row">
+            <div class="col">
+                <footer class="footer text-center">
+                    <a href="../index.html"><img id = "logo" src="../imagenes/logo.jpg" alt="Logo"></a>
+                    <a href="contacto.html">CONTACTO</a>
+                    <div>
+                        <a href="https://www.facebook.com/"> <img src="../imagenes/logofacebook.jpg" alt="logofacebook" id="icon"></a>
+                        <a href="https://www.instagram.com/?hl=es"> <img src="../imagenes/logoinstagram.jpg" alt="logoInstagram" id="icon"></a>
+                        <a href="https://twitter.com/home"> <img src="../imagenes/logotwitter.jpg" alt="logotwitter" id="icon"></a>
+                        <a href="https://www.youtube.com/"> <img src="../imagenes/logoyoutube.jpg" alt="logoyoutube" id="icon"></a>
+                    </div>
 
-    </footer>
-
-  </div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-</body>
+                    <div class="container p-4 pb-0">
+                        <!--Formulario suscripcion-->
+                        <section class="">
+                            <form action="">
+                                <div class="row d-flex justify-content-center">
+                                    <div class="col-auto">
+                                        <p class="pt-2">
+                                            <strong>Suscribite para recibir ofertas</strong>
+                                        </p>
+                                    </div>
+                                    <div class="col-md-5 col-12">
+                                        <div class="form-outline mb-4">
+                                            <input type="email" id="form5Example27" class="form-control" placeholder="Email..." />
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="submit" class="btn btn-info mb-4">Suscribir</button>              
+                                    </div>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+                </footer>
+            </div>
+        </div>
+  
+    </div>
+  
+    <!----Script necesario para Bootstrap---->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  
+  </body>
 </html>
