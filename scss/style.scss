@@ -1,321 +1,188 @@
-$colorFondo:#18191a;
-$colorLetra: white;
-$fuenteLetra: 'Ubuntu', sans-serif;
-
-*{
-    background-color: $colorFondo;
-    color: $colorLetra;
-    font-family: $fuenteLetra;
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
 }
 
-body{
-    background: $colorFondo;
+body {
+  background: #1c1b1b;
+  background: -webkit-linear-gradient(to bottom, #1c1b1b, #2b2a2a, #1c1b1b);
+  background: linear-gradient(to bottom, #1c1b1b, #2b2a2a, #1c1b1b);
+  margin: 0;
 }
 
-/*----EXTEND----*/
-.flexColumn{
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header {
+  margin: 0;
+  padding-bottom: 20px;
+  text-align: center;
+
+  img {
+    max-width: 400px;
+    height: 100px;
+  }
+}
+
+.menu {
+  padding: 10px;
+
+  h2 {
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .mainBanco {
+    @extend .flexColumn;
+    gap: 5px;
+
+    .bancos {
+      @extend .flexColumn;
+      gap: 5px;
+    }
+  }
+
+  .bancos img {
+    height: 150px;
+    max-width: 100%;
+  }
+
+  .mainInfo {
+    @extend .flexColumn;
+
+    .info {
+      @extend .flexColumn;
+    }
+  }
+
+  .info img {
+    height: 200px;
+    max-width: 100%;
+  }
+}
+
+.aside {
+  h2 {
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .ofertas {
+    margin: 30px;
     display: flex;
     flex-direction: column;
-}
-/*----MIXIN----*/
-@mixin sizes($width,$height){
-    height:$height ;
-    max-width:$width;
+    gap: 20px;
+
+    .asideOferta {
+      @extend .flexColumn;
+      gap: 5px;
+      box-shadow: 0px 1px 5px white;
+      padding: 10px;
+    }
+  }
+
+  .asideOferta img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
-.draft{
-    display: grid;
-    grid-template:
-                "header"
-                "nav"
-                "aside"
-                "main"
-                "footer" /
-                380px;
+.footer {
+  @extend .flexColumn;
+
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+  }
+
+  img {
+    height: 100px;
+    max-width: 100%;
+  }
+
+  #icon {
+    max-width: 50px;
+    height: 100%;
+  }
 }
-/*----HEADER COMUN PARA TODOS LOS HTMLs----*/
-.header{
-    grid-area:header;
-    text-align: center;
-    img{
-        @include sizes(100%,auto);
-    }
-    #icon{
-        color: white;
-    }
-}
-/*----NAV COMUN PARA TODOS LOS HTMLs----*/
-.navbar{
-    grid-area: nav;
-    a:hover{
-        text-decoration: underline
-    }
-}
-/*----ASIDE COMUN PARA TODOS LOS HTMLs----*/
-.aside{
-    grid-area: aside;
-    margin: 30px;
-    gap: 20px;
-    .ofertas{
-        @extend .flexColumn;
-    }
-    h2{
+
+@media (min-width: 768px) {
+  .header img {
+    max-width: 100%;
+    height: 120px;
+  }
+
+  .aside .ofertas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .menu {
+    .mainBanco {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      .bancos {
+        height: 250px;
+        width: 200px;
         text-align: center;
-        padding-bottom: 40px;
+      }
     }
-    .asideOferta{
-        @extend .flexColumn;
-        margin: 10px;
-        align-items: center;
-        gap:10px;
-        padding: 15px;
-        box-shadow: 0px 1px 5px white;
-        img{
-            @include sizes(100%,200px);
-        }
-        &:hover{
-            transform: scale(1.2, 1.2);
-        }
+
+    .mainInfo {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
     }
+  }
 }
-/*----MAIN y H2 COMUN PARA TODOS LOS HTML----*/
-.main{
-    grid-area: main;
-    margin: 30px;
-    gap: 20px;
-    h2{
-        text-align: center;
-        padding-bottom: 30px;
-        padding-top: 30px;
-    }
-    /*----Esta parte es de index.html----*/
-    .bancos{
-        @extend .flexColumn;
-        margin: 10px;
-        align-items: center;
-        gap:10px;
-        padding: 15px;
-        img{
-            @include sizes(100%,200px);
-        }
-    }
-    .info{
-        @extend .flexColumn;
-        margin: 10px;
-        align-items: center;
-        gap:10px;
-        padding: 15px;
-        img{
-            @include sizes(100%,200px);
-        }
-    }
-    /*----Esta parte es de notebooks.html----*/
-    .mainMarcas{
-        grid-area: marcas;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        padding-bottom: 200px;
-        img{
-            height: 100px;
-        }
-    }
-    /*----Esta parte es de consolas.html----*/
-    .mainJuegos{
-        @extend .flexColumn;
-        align-items: center;
-        .juegos{
-            @extend .flexColumn;
-            margin: 10px;
-            align-items: center;
-            img{
-                @include sizes(100%,200px);
-            }
-        }
-    }
-    .media{
-        @extend .flexColumn;
-        text-align: center;
-    }
-    /*----Esta parte es de celulares.html----*/
-    .mainAccesorio{
-        display: grid;
-        grid-template:
-                    "acc1       acc2"
-                    "acc3       acc4" ;    
-        .accesorio{
-            @extend .flexColumn;
-            margin: 10px;
-            align-items: center;
-            gap:10px;
-            padding: 15px;
-            img{
-                @include sizes(100%,auto);
-            }
-            p{
-                font-size: 15px;
-                text-align: center;
-            }
-            #acc1{
-                grid-area: acc1;
-            }
-            #acc2{
-                grid-area: acc2;
-            }
-            #acc3{
-                grid-area: acc3;
-            }
-            #acc4{
-                grid-area: acc4;
-            }
-        }
-    }
-    .cardsPlanes{
-        margin: 30px;
-    }
-    /*---Aca esta contactos.html----*/
-    #map{
-        height: 350px;
-        width: 320px;
-    }
-}
-/*----FOOTER COMUN PARA TODOS LOS HTMLs----*/
-.footer{
-    padding-top: 20px;
-    box-shadow: 0px 1px 10px white;
-    grid-area: footer;
-    gap: 20px;
+
+@media (min-width: 1024px) {
+  .menu {
+    padding: 100px;
+  }
+
+  .aside .ofertas {
     @extend .flexColumn;
-    align-items: center;
-    a{
-        color: white;
-        text-decoration: none;
+  }
+
+  .menu {
+    .mainBanco {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-around;
+      gap: 30px;
+      padding-bottom: 150px;
+
+      .bancos {
+        height: 250px;
+        width: 200px;
+        text-align: center;
+      }
     }
-    img{
-        @include sizes(100%,100px);
+
+    .mainInfo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      gap: 30px;
+
+      .info {
+        height: 250px;
+        width: 200px;
+        text-align: center;
+      }
     }
-    #icon{
-        max-width: 50px;
-        height: 100%;
-    }
-}
-/*----Medias queries para tablet----*/
-@media (min-width:768px){
-    .draft{
-        display: grid;
-        grid-template:
-                    "header     header"
-                    "nav        nav"
-                    "aside      main"
-                    "footer     footer"/
-                    auto        auto;      
-    }
-    .header{
-        grid-area: header;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        img{
-            @include sizes(100%,100px);
-        }
-        .buscador{
-            width: 300px;
-            height: 30px;
-        }
-    }
-    .nav{
-        grid-area: nav;
-        justify-content: space-around;
-    }
-    .main{
-        .cardsPlanes{
-            margin: 15px;
-        }
-        #map{
-            height: 350px;
-            width: 100%;
-        }
-    }
-    .footer{
-        img{
-            width: 300px;
-            height: 100%;
-        }
-    }
-}
-/*----Medias queries para computadora----*/
-@media (min-width:1024px){
-    .draft{
-        display: grid;
-        grid-template:
-                    "header     header"
-                    "nav        nav"
-                    "aside      aside"
-                    "main       main"
-                    "footer     footer";
-    }
-    .aside{
-        grid-area: aside;
-        .ofertas{
-        flex-direction: row;
-        justify-content: space-around;
-        }
-    }
-    .main{
-        grid-area: main;
-        /*----index.html----*/
-        .mainBanco{
-            grid-area: main;
-            display: flex;
-            justify-content: space-around;
-            p{
-                text-align: center;
-            }
-        }
-        .mainInfo{
-            display: flex;
-            justify-content: space-around;
-            p{
-                text-align: center;
-            }
-        }
-        /*----Consolas.html----*/
-        .mainJuegos{
-            display: grid;
-            grid-template:
-                        "juego1     juego2      juego3"
-                        "juego4     juego5      juego6";
-        }
-        .media{
-            flex-direction: row;
-            justify-content: space-around;
-            #vid{
-                height: 300px;
-                width: 500px;
-            }
-        }
-        /*----celulares.html----*/
-        .mainAccesorio{
-            grid-template:
-            "acc1       acc2    acc3       acc4" ;  
-            .accesorio{
-                img{
-                    width: 200px;
-                    height: 200px;
-                }
-                p{
-                    font-size: 25px;
-                    text-align: center;
-                }
-            }
-        }
-        .cardsPlanes{
-            margin: 100px;
-        }
-        /*----contacto.html----*/
-        #map{
-            max-width: 100%;
-            height: 450px;
-        }
-    }
+  }
 }

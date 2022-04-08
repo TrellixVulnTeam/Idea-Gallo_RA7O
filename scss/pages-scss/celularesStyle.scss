@@ -1,0 +1,176 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+  }
+  
+  body {
+    background: #1c1b1b;
+    background: -webkit-linear-gradient(to bottom, #1c1b1b, #2b2a2a, #1c1b1b);
+    background: linear-gradient(to bottom, #1c1b1b, #2b2a2a, #1c1b1b);
+    margin: 0;
+  }
+  
+  .flexColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .header {
+    margin: 0;
+    padding-bottom: 20px;
+    text-align: center;
+  
+    img {
+      max-width: 400px;
+      height: 100px;
+    }
+  }
+  
+  .menu {
+    padding: 10px;
+  
+    h2 {
+      text-align: center;
+      padding-bottom: 15px;
+      padding-top: 15px;
+    }
+  
+    .mainAccesorio {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+  
+      .accesorio {
+        height: 300px;
+        width: 200px;
+        text-align: center;
+  
+        p {
+          font-size: 18px;
+          text-align: center;
+        }
+      }
+    }
+  
+    .cardsPlanes {
+      margin: 20px;
+  
+      img {
+        height: auto;
+        width: auto;
+      }
+    }
+  }
+  
+  .aside {
+    h2 {
+      text-align: center;
+      padding-bottom: 15px;
+      padding-top: 15px;
+    }
+  
+    .ofertas {
+      margin: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+  
+      .asideOferta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 5px;
+        box-shadow: 0px 1px 5px white;
+        padding: 10px;
+      }
+    }
+  
+    .asideOferta img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
+  .footer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  
+    a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+    }
+  
+    img {
+      height: 100px;
+      max-width: 100%;
+    }
+  
+    #icon {
+      max-width: 50px;
+      height: 100%;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .header img {
+      max-width: 100%;
+      height: 120px;
+    }
+  
+    .aside .ofertas {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      text-align: center;
+    }
+  
+    .menu .mainAccesorio {
+      display: grid;
+      grid-template: "acc1   acc2" "acc3   acc4";
+      align-items: center;
+    }
+  
+    #acc1 {
+      grid-area: acc1;
+    }
+  
+    #acc2 {
+      grid-area: acc2;
+    }
+  
+    #acc3 {
+      grid-area: acc3;
+    }
+  
+    #acc4 {
+      grid-area: acc4;
+    }
+  
+    .menu .cardsPlanes {
+      margin: 50px;
+  
+      img {
+        height: 150px;
+        width: 150px;
+        margin: 50px;
+      }
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .menu {
+      padding: 100px;
+    }
+  
+    .aside .ofertas {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
